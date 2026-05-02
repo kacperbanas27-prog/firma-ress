@@ -42,9 +42,18 @@ export default function ProductDetail() {
           {/* Main Product Image - Sticky for desktop */}
           <div className="lg:col-span-7 space-y-8">
             <div className="relative aspect-[4/5] bg-gray-50 rounded-sm overflow-hidden flex items-center justify-center p-12 lg:p-24 group">
-               <div className="w-full h-full border-8 border-dashed border-gray-100 flex items-center justify-center text-gray-100 font-black italic uppercase text-9xl group-hover:scale-105 transition-transform duration-700 select-none">
-                 {product.name.charAt(0)}
-               </div>
+               {product.image ? (
+                 <img 
+                   src={product.image} 
+                   alt={product.name} 
+                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                   referrerPolicy="no-referrer"
+                 />
+               ) : (
+                 <div className="w-full h-full border-8 border-dashed border-gray-100 flex items-center justify-center text-gray-100 font-black italic uppercase text-9xl group-hover:scale-105 transition-transform duration-700 select-none">
+                   {product.name.charAt(0)}
+                 </div>
+               )}
                
                {/* Editorial Tag */}
                <div className="absolute top-12 left-12 transform -rotate-90 origin-left border-l-4 border-brand-blue pl-4">

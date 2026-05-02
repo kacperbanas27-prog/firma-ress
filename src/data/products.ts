@@ -10,6 +10,7 @@ export type Product = {
   material: string;
   gender: 'male' | 'female';
   description: string;
+  image?: string;
   specs: {
     gramatura: string;
     surowiec: string;

@@ -82,9 +82,18 @@ export default function CategoryDetail() {
                 className="group bg-white p-2 rounded-sm border border-slate-100 transition-all hover:shadow-xl block"
               >
                 <div className="bg-slate-50 aspect-square mb-6 flex items-center justify-center p-8 overflow-hidden relative">
-                   <div className="w-full h-full border-4 border-dashed border-slate-200 flex items-center justify-center text-slate-200 font-black italic uppercase text-center text-2xl group-hover:scale-105 transition-transform">
-                     {product.name.split(' ')[0]} {gender === 'male' ? 'M' : 'K'}
-                   </div>
+                   {product.image ? (
+                     <img 
+                       src={product.image} 
+                       alt={product.name} 
+                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                       referrerPolicy="no-referrer"
+                     />
+                   ) : (
+                     <div className="w-full h-full border-4 border-dashed border-slate-200 flex items-center justify-center text-slate-200 font-black italic uppercase text-center text-2xl group-hover:scale-105 transition-transform">
+                       {product.name.split(' ')[0]} {gender === 'male' ? 'M' : 'K'}
+                     </div>
+                   )}
                    <div className="absolute top-4 right-4 bg-white/80 px-2 py-1 text-[8px] font-bold uppercase tracking-widest">Premium quality</div>
                 </div>
                 <div className="p-4">

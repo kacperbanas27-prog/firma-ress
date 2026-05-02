@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { 
   ShieldCheck, ArrowRight, Zap, Recycle,
   Scissors, Shirt, Palette, Printer, Waves, Flag, Ruler
@@ -12,6 +12,8 @@ import {
 import { Logo } from '../components/layout/Logo';
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Hero Section */}
@@ -102,10 +104,19 @@ export default function Home() {
             </div>
           </div>
 
-          <NavLink to="/kontakt" className="bg-brand-blue text-white p-8 rounded-sm flex items-center justify-between group cursor-pointer overflow-hidden relative">
+          <div 
+            onClick={() => navigate('/kontakt')}
+            className="bg-brand-blue text-white p-8 rounded-sm flex items-center justify-between group cursor-pointer overflow-hidden relative"
+          >
             <div className="relative z-10">
               <span className="text-[10px] uppercase font-bold tracking-widest opacity-60 mb-1 block">Masz pytania?</span>
-              <a href="tel:+48501893106" className="text-xl font-black italic hover:underline decoration-white/20 underline-offset-4">+48 501 893 106</a>
+              <a 
+                href="tel:+48501893106" 
+                onClick={(e) => e.stopPropagation()} 
+                className="text-xl font-black italic hover:underline decoration-white/20 underline-offset-4"
+              >
+                +48 501 893 106
+              </a>
             </div>
             <div className="bg-white text-brand-blue p-3 rounded-sm group-hover:scale-110 transition-transform relative z-10">
               <ArrowRight size={20} />
@@ -113,7 +124,7 @@ export default function Home() {
             <div className="absolute -right-4 top-1/2 -translate-y-1/2 opacity-5 scale-150 rotate-[-15deg]">
               <ArrowRight size={120} />
             </div>
-          </NavLink>
+          </div>
         </div>
       </section>
 
