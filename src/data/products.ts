@@ -32,7 +32,36 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const PRODUCTS_DATA: Record<string, Product[]> = {
-  't-shirty': [],
+  't-shirty': [
+    { 
+      id: 't-shirt-meski-basic',
+      name: 'T-shirt Męski Basic', 
+      price: '39.00 PLN', 
+      material: '100% Bawełna', 
+      gender: 'male',
+      description: 'Klasyczny t-shirt męski z krótkim rękawem, wykonany z wysokiej jakości bawełny.',
+      image: '/meskie/t-shirt-krotki-rekaw.png',
+      specs: {
+        gramatura: '160g/m2',
+        surowiec: '100% Bawełna Single Jersey',
+        wykonczenie: 'Wzmocnienie na ramionach'
+      }
+    },
+    { 
+      id: 'longsleeve-meski-standard',
+      name: 'Longsleeve Męski Standard', 
+      price: '55.00 PLN', 
+      material: '100% Bawełna', 
+      gender: 'male',
+      description: 'Komfortowa koszulka męska z długim rękawem, idealna na chłodniejsze dni.',
+      image: '/meskie/longsleeve-meski.png',
+      specs: {
+        gramatura: '180g/m2',
+        surowiec: '100% Bawełna',
+        wykonczenie: 'Dekolt wykończony ściągaczem'
+      }
+    }
+  ],
   'polary': [],
   'koszulki-polo': [],
   'bluzy': [],
