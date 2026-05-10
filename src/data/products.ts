@@ -40,7 +40,7 @@ export const PRODUCTS_DATA: Record<string, Product[]> = {
       material: '100% Bawełna', 
       gender: 'male',
       description: 'Klasyczny t-shirt męski z krótkim rękawem, wykonany z wysokiej jakości bawełny.',
-      image: '/meskie/t-shirt-krotki-rekaw.png',
+      image: '/meskie/t-shirt-meski.png',
       specs: {
         gramatura: '160g/m2',
         surowiec: '100% Bawełna Single Jersey',
@@ -48,8 +48,8 @@ export const PRODUCTS_DATA: Record<string, Product[]> = {
       }
     },
     { 
-      id: 'longsleeve-meski-standard',
-      name: 'Longsleeve Męski Standard', 
+      id: 'longsleeve-meski-basic',
+      name: 'Longsleeve Męski Basic', 
       price: '55.00 PLN', 
       material: '100% Bawełna', 
       gender: 'male',
@@ -59,20 +59,6 @@ export const PRODUCTS_DATA: Record<string, Product[]> = {
         gramatura: '180g/m2',
         surowiec: '100% Bawełna',
         wykonczenie: 'Dekolt wykończony ściągaczem'
-      }
-    },
-    { 
-      id: 't-shirt-meski-premium',
-      name: 'T-shirt Męski Premium', 
-      price: '59.00 PLN', 
-      material: '100% Bawełna Czesana', 
-      gender: 'male',
-      description: 'T-shirt męski klasy premium, wykonany z wyjątkowo miękkiej bawełny czesanej.',
-      image: '/meskie/t-shirt-premium.png',
-      specs: {
-        gramatura: '190g/m2',
-        surowiec: '100% Bawełna Czesana',
-        wykonczenie: 'Podwójne szwy, taśma wzmacniająca'
       }
     }
   ],
