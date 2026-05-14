@@ -48,9 +48,9 @@ export const PRODUCTS_DATA: Record<string, Product[]> = {
       material: '100% Bawełna', 
       gender: 'male',
       description: 'Klasyczny t-shirt męski z krótkim rękawem, wykonany z wysokiej jakości bawełny.',
-      image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/t-shirt-krotki-rekaw.png.png',
+      image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/t-shirt-krotki-rekaw.png.png',
       colors: [
-        { name: 'Biały', hex: '#FFFFFF', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/t-shirt-krotki-rekaw.png.png' },
+        { name: 'Biały', hex: '#FFFFFF', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/t-shirt-krotki-rekaw.png.png' },
         { name: 'Czarny', hex: '#000000', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirt/Ress_tshirt_czarny-1223x1536.png' },
         { name: 'Czerwony', hex: '#E21E26', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirt/Ress_tshirt_czerwony-250x314.png' },
         { name: 'Pomarańczowy', hex: '#F99E1C', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirt/Ress_tshirt_orange-250x314.png' },
@@ -85,9 +85,9 @@ export const PRODUCTS_DATA: Record<string, Product[]> = {
       material: '100% Bawełna', 
       gender: 'male',
       description: 'Komfortowa koszulka męska z długim rękawem.',
-      image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/longsleeve-meski.png.png',
+      image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/longsleeve-meski.png.png',
       colors: [
-        { name: 'Biały', hex: '#FFFFFF', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/longsleeve-meski.png.png' },
+        { name: 'Biały', hex: '#FFFFFF', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/longsleeve-meski.png.png' },
         { name: 'Błękitny', hex: '#87CEEB', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirty%20dlugie/RESS_tshirt_dl_rekaw_meski_blekitny-700x879.png' },
         { name: 'Czerwony', hex: '#E21E26', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirty%20dlugie/RESS_tshirt_dl_rekaw_meski_czerwony-700x879.png' },
         { name: 'Pomarańczowy', hex: '#F99E1C', image: 'https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/afe25bd8e4730474f39f5fdee4e5f7eab1ca0003/T-shirty/M%C4%99skie/kolory%20t-shirty%20dlugie/RESS_tshirt_dl_rekaw_meski_pomaranczowy-700x879.png' },

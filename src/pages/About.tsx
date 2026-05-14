@@ -62,13 +62,9 @@ export default function About() {
           
           <div className="flex-1 w-full space-y-8 md:space-y-12 relative">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-blue/5 rounded-full blur-3xl hidden md:block" />
-            <div className="relative z-10 aspect-[4/3] rounded-sm overflow-hidden bg-slate-100 shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1558231031-645300ba8ed9?q=80&w=2070&auto=format&fit=crop" 
-                alt="Szwalnia" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                referrerPolicy="no-referrer"
-              />
+            <div className="relative z-10 aspect-[4/3] rounded-sm overflow-hidden bg-slate-900 flex items-center justify-center text-slate-700">
+              <Shirt size={80} strokeWidth={1} />
+              <div className="absolute inset-0 bg-brand-blue/5" />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
               <div className="bg-slate-50 p-6 rounded-sm border-l-4 border-brand-blue">

@@ -17,7 +17,7 @@ export default function Home() {
   const navigate = useNavigate();
   const HERO_IMAGES = [
     {
-      src: "https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/t-shirt-krotki-rekaw.png.png",
+      src: "https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/t-shirt-krotki-rekaw.png.png",
       alt: "T-shirt Męski"
     },
     {
@@ -25,7 +25,7 @@ export default function Home() {
       alt: "T-shirt Damski"
     },
     {
-      src: "https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/refs/heads/main/T-shirty/M%C4%99skie/longsleeve-meski.png.png",
+      src: "https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/longsleeve-meski.png.png",
       alt: "Longsleeve Męski"
     },
     {
@@ -303,13 +303,11 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          <NavLink to="/produkty/polary" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1541888941255-276f956f103f?q=80&w=2070&auto=format&fit=crop" 
-              alt="Polary firmowe" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              referrerPolicy="no-referrer"
-            />
+          <NavLink to="/produkty/polary" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer bg-slate-900">
+            <div className="w-full h-full flex items-center justify-center text-slate-700 transition-transform duration-700 group-hover:scale-110">
+              <Shirt size={64} strokeWidth={1} />
+            </div>
+            <div className="absolute inset-0 bg-brand-blue/5" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8">
               <h3 className="text-xl font-black text-white italic uppercase tracking-tighter mb-2">Polary</h3>
@@ -317,11 +315,11 @@ export default function Home() {
             </div>
           </NavLink>
 
-          <NavLink to="/produkty/t-shirty" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer">
+          <NavLink to="/produkty/t-shirty" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer bg-white">
             <img 
-              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=2070&auto=format&fit=crop" 
+              src="https://raw.githubusercontent.com/kacperbanas27-prog/firma-ress/0267195dbff81dcee9d4f09c88a5ad38fe1d1d77/t-shirty/t-shirt-krotki-rekaw.png.png" 
               alt="T-shirty reklamowe" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
@@ -331,13 +329,11 @@ export default function Home() {
             </div>
           </NavLink>
 
-          <NavLink to="/produkty/bluzy" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=2070&auto=format&fit=crop" 
-              alt="Bluzy z nadrukiem" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              referrerPolicy="no-referrer"
-            />
+          <NavLink to="/produkty/bluzy" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer bg-slate-900">
+            <div className="w-full h-full flex items-center justify-center text-slate-700 transition-transform duration-700 group-hover:scale-110">
+              <Shirt size={64} strokeWidth={1} />
+            </div>
+            <div className="absolute inset-0 bg-brand-blue/5" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8">
               <h3 className="text-xl font-black text-white italic uppercase tracking-tighter mb-2">Bluzy</h3>
@@ -345,13 +341,11 @@ export default function Home() {
             </div>
           </NavLink>
 
-          <NavLink to="/produkty/koszulki-polo" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1974&auto=format&fit=crop" 
-              alt="Koszulki Polo" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              referrerPolicy="no-referrer"
-            />
+          <NavLink to="/produkty/koszulki-polo" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer bg-slate-900">
+            <div className="w-full h-full flex items-center justify-center text-slate-700 transition-transform duration-700 group-hover:scale-110">
+              <Shirt size={64} strokeWidth={1} />
+            </div>
+            <div className="absolute inset-0 bg-brand-blue/5" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8">
               <h3 className="text-xl font-black text-white italic uppercase tracking-tighter mb-2">Polo</h3>
@@ -359,13 +353,11 @@ export default function Home() {
             </div>
           </NavLink>
 
-          <NavLink to="/produkty/gastronomia" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=2070&auto=format&fit=crop" 
-              alt="Odzież gastronomiczna" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              referrerPolicy="no-referrer"
-            />
+          <NavLink to="/produkty/gastronomia" className="group relative h-[300px] sm:h-[400px] overflow-hidden rounded-sm cursor-pointer bg-slate-900">
+            <div className="w-full h-full flex items-center justify-center text-slate-700 transition-transform duration-700 group-hover:scale-110">
+              <Shirt size={64} strokeWidth={1} />
+            </div>
+            <div className="absolute inset-0 bg-brand-blue/5" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8">
               <h3 className="text-xl font-black text-white italic uppercase tracking-tighter mb-2">Gastronomia</h3>
