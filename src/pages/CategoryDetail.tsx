@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import { ChevronRight, ArrowRight, ChevronLeft } from 'lucide-react';
 import { CATEGORIES, PRODUCTS_DATA } from '../data/products';
+import ProductImageSlider from '../components/ProductImageSlider';
 
 export default function CategoryDetail() {
   const { slug } = useParams();
@@ -26,17 +27,14 @@ export default function CategoryDetail() {
   }
 
   return (
-    <section className="container mx-auto px-4 mb-24">
-      <div className="mb-12">
-        <NavLink to="/" className="text-brand-blue text-[10px] uppercase font-black tracking-widest flex items-center gap-2 mb-8 hover:gap-4 transition-all w-fit">
-          <ChevronLeft size={14} /> Powrót do strony głównej
-        </NavLink>
-        <div className="flex flex-col lg:flex-row items-end justify-between gap-8">
+    <section className="container mx-auto px-4 pt-24 md:pt-32 mb-16">
+      <div className="mb-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 text-center lg:text-left">
            <div>
              <span className="text-brand-blue text-[10px] uppercase font-black tracking-widest mb-4 block">Kolekcja rzemieślnicza</span>
-             <h1 className="text-5xl lg:text-7xl heading-bold text-slate-800 uppercase italic font-black tracking-tighter leading-[0.9]">{category.name}</h1>
+             <h1 className="text-4xl sm:text-5xl lg:text-7xl heading-bold text-slate-800 uppercase italic font-black tracking-tighter leading-[1] sm:leading-[0.9]">{category.name}</h1>
            </div>
-           <div className="flex bg-gray-200 p-1 rounded-sm">
+           <div className="flex bg-gray-200 p-1 rounded-sm w-fit">
              <button 
                onClick={() => setGender('male')}
                className={`px-6 py-2 text-[10px] font-black uppercase italic tracking-widest transition-all ${gender === 'male' ? 'bg-white shadow-sm opacity-100' : 'opacity-40 hover:opacity-60'}`}
@@ -53,7 +51,7 @@ export default function CategoryDetail() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Sidebar Categories */}
         <div className="lg:w-1/4 space-y-1 hidden lg:block">
           <span className="text-brand-blue text-[10px] uppercase font-black tracking-widest mb-6 block">Inne Kategorie</span>
@@ -74,35 +72,33 @@ export default function CategoryDetail() {
 
         {/* Product Grid */}
         <div className="lg:w-3/4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <NavLink 
                 key={product.id} 
                 to={`/produkty/${slug}/${product.id}`}
                 className="group bg-white p-2 rounded-sm border border-slate-100 transition-all hover:shadow-xl block"
               >
-                <div className="bg-slate-50 aspect-square mb-6 flex items-center justify-center p-8 overflow-hidden relative">
+                <div className="bg-white aspect-square mb-4 flex items-center justify-center overflow-hidden relative border border-slate-100/50">
                    {product.image ? (
-                     <img 
-                       src={product.image} 
-                       alt={product.name} 
-                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                       referrerPolicy="no-referrer"
+                     <ProductImageSlider 
+                       mainImage={product.image}
+                       gallery={product.gallery}
+                       alt={product.name}
+                       interval={2500}
                      />
                    ) : (
-                     <div className="w-full h-full border-4 border-dashed border-slate-200 flex items-center justify-center text-slate-200 font-black italic uppercase text-center text-2xl group-hover:scale-105 transition-transform">
+                     <div className="w-full h-full border-4 border-dashed border-slate-200 flex items-center justify-center text-slate-200 font-black italic uppercase text-center text-2xl">
                        {product.name.split(' ')[0]} {gender === 'male' ? 'M' : 'K'}
                      </div>
                    )}
-                   <div className="absolute top-4 right-4 bg-white/80 px-2 py-1 text-[8px] font-bold uppercase tracking-widest">Premium quality</div>
                 </div>
-                <div className="p-4">
-                  <h4 className="heading-bold text-lg mb-1">{product.name}</h4>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-4">{product.material}</p>
-                  <div className="flex items-center justify-between border-t border-slate-100 pt-4">
-                    <span className="text-brand-blue font-black italic">{product.price}</span>
-                    <button className="bg-brand-blue text-white p-2.5 rounded-sm group-hover:scale-110 transition-transform">
-                      <ArrowRight size={16} />
+                <div className="p-3">
+                  <h4 className="heading-bold text-base mb-1">{product.name}</h4>
+                  <div className="flex items-center justify-between border-t border-slate-100 pt-3">
+                    <span className="text-brand-blue font-black italic text-sm">{product.price}</span>
+                    <button className="bg-brand-blue text-white p-2 rounded-sm group-hover:scale-110 transition-transform">
+                      <ArrowRight size={14} />
                     </button>
                   </div>
                 </div>

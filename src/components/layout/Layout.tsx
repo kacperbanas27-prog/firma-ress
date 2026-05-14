@@ -9,9 +9,9 @@ import { Footer } from './Footer';
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-gray-50 flex flex-col font-sans overflow-x-hidden">
       <Header />
-      <main className="flex-grow pt-24">
+      <main className="flex-grow">
         <Outlet />
       </main>
       <Footer />

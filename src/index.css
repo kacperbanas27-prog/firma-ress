@@ -25,6 +25,10 @@ html {
   }
 }
 
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
 .heading-bold {
   @apply font-black italic uppercase tracking-tighter leading-[0.9];
 }

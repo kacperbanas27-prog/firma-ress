@@ -3,18 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
+import { MapPin, Phone, Mail, Clock, ChevronLeft } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section className="container mx-auto px-4 mb-24">
-      <span className="text-brand-blue text-[10px] uppercase font-black tracking-widest mb-4 block">Kontakt</span>
-      <h2 className="text-5xl lg:text-7xl heading-bold mb-16 text-slate-800">
-        Zapytaj o<br />wycenę.
+    <section className="container mx-auto px-4 pt-24 md:pt-32 mb-24">
+      <span className="text-brand-blue text-[10px] uppercase font-black tracking-widest mb-4 block text-center md:text-left">Kontakt</span>
+      <h2 className="text-4xl md:text-5xl lg:text-7xl heading-bold mb-12 md:mb-16 text-slate-800 text-center md:text-left leading-tight">
+        Zapytaj o<br className="hidden md:block" /> wycenę.
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2 bg-white p-12 rounded-sm shadow-xl">
+        <div className="lg:col-span-2 bg-white p-6 sm:p-12 rounded-sm shadow-xl">
            <h3 className="text-2xl heading-bold mb-10 text-slate-800">Formularz Kontaktowy</h3>
            <form className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

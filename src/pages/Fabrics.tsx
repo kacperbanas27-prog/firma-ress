@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { NavLink } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Fabrics() {
@@ -19,8 +21,7 @@ export default function Fabrics() {
         'Niska kurczliwość (+- 2%) w praniu 95°C (biała)',
         'Trwałość barw',
         'Wysoki komfort użytkowania'
-      ],
-      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1000'
+      ]
     },
     {
       id: 'standardowe',
@@ -34,8 +35,7 @@ export default function Fabrics() {
         'Doskonała baza pod nadruki i hafty',
         'Wytrzymałość na częste pranie',
         'Klasyczny wygląd i splot'
-      ],
-      image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1000'
+      ]
     },
     {
       id: 'polary',
@@ -49,14 +49,13 @@ export default function Fabrics() {
         'Wykończenie antypillingowe (brak mechacenia)',
         'Nie ogranicza przepływu pary wodnej',
         'Wysoka izolacja termiczna'
-      ],
-      image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000'
+      ]
     }
   ];
 
   return (
     <div className="pb-20">
-      <section className="container mx-auto px-4 pt-16 mb-20 text-center">
+      <section className="container mx-auto px-4 pt-32 mb-20 text-center">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,14 +89,21 @@ export default function Fabrics() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="aspect-square bg-slate-100 rounded-sm overflow-hidden relative group"
+                className="aspect-square bg-slate-50 border border-slate-100 rounded-sm overflow-hidden relative group flex items-center justify-center"
               >
-                <img 
-                  src={section.image} 
-                  alt={section.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
-                />
-                <div className="absolute inset-0 border-[20px] border-white opacity-20 pointer-events-none" />
+                {/* Image Placeholder */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <pattern id={`pattern-${section.id}`} width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="1"/>
+                    </pattern>
+                    <rect width="100%" height="100%" fill={`url(#pattern-${section.id})`} />
+                  </svg>
+                </div>
+                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-200 rotate-90">
+                  Miejsce na zdjęcie tkaniny
+                </div>
+                <div className="absolute inset-0 border-[20px] border-white/50 pointer-events-none" />
               </motion.div>
             </div>
             
@@ -106,30 +112,32 @@ export default function Fabrics() {
                 initial={{ opacity: 0, x: idx % 2 === 1 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
               >
-                 <h2 className="text-4xl font-black italic uppercase tracking-tighter text-brand-dark mb-8">
+                 <h2 className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter text-brand-dark mb-8">
                    {section.title}
                  </h2>
 
-                 <div className="grid grid-cols-2 gap-4 mb-8">
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                    {section.stats.map(stat => (
-                     <div key={stat.label} className="bg-slate-50 p-6 rounded-sm border-l-4 border-brand-blue">
+                     <div key={stat.label} className="bg-slate-50 p-6 rounded-sm border-l-4 border-brand-blue text-left">
                        <span className="text-[10px] uppercase font-bold text-slate-400 block mb-1">{stat.label}</span>
                        <p className="font-black italic text-lg text-brand-dark">{stat.value}</p>
                      </div>
                    ))}
                  </div>
 
-                 <h3 className="text-xs uppercase font-black tracking-widest text-brand-dark mb-4 pb-2 border-b-2 border-slate-100 inline-block">Charakterystyka:</h3>
-                 <ul className="space-y-4">
-                   {section.features.map(feature => (
-                     <li key={feature} className="flex items-start gap-3 group">
-                       <div className="w-5 h-5 bg-brand-blue/10 text-brand-blue flex items-center justify-center rounded-sm shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                         <div className="w-1.5 h-1.5 bg-current rounded-full" />
-                       </div>
-                       <span className="text-sm font-medium text-slate-600 line-tight">{feature}</span>
-                     </li>
-                   ))}
-                 </ul>
+                 <div className="text-left">
+                  <h3 className="text-xs uppercase font-black tracking-widest text-brand-dark mb-4 pb-2 border-b-2 border-slate-100 inline-block">Charakterystyka:</h3>
+                  <ul className="space-y-4">
+                    {section.features.map(feature => (
+                      <li key={feature} className="flex items-start gap-3 group">
+                        <div className="w-5 h-5 bg-brand-blue/10 text-brand-blue flex items-center justify-center rounded-sm shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <div className="w-1.5 h-1.5 bg-current rounded-full" />
+                        </div>
+                        <span className="text-sm font-medium text-slate-600 line-tight">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                 </div>
 
                  <div className="mt-12 p-4 bg-brand-dark text-white/50 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
                    UWAGA: Kolory wyświetlane na monitorze mają charakter wyłącznie orientacyjny i mogą nie odzwierciedlać dokładnie rzeczywistych barw dzianiny.

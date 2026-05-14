@@ -3,6 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { NavLink } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
+
 export default function Sizes() {
   const tables = [
     { title: 'T-Shirt Damski', data: [['S', '50 cm', '66 cm'], ['M', '53 cm', '69 cm'], ['L', '56 cm', '72 cm'], ['XL', '59 cm', '74 cm'], ['XXL', '62 cm', '77 cm']] },
@@ -12,7 +15,7 @@ export default function Sizes() {
   ];
 
   return (
-    <section className="container mx-auto px-4 mb-24">
+    <section className="container mx-auto px-4 pt-32 mb-24">
       <span className="text-brand-blue text-[10px] uppercase font-black tracking-widest mb-4 block">Specyfikacja techniczna</span>
       <h2 className="text-5xl lg:text-7xl heading-bold mb-16 text-slate-800">
         Tabele<br />rozmiarów.
